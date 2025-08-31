@@ -102,7 +102,7 @@ const JobSearchPage = () => {
       {/* Hero Section */}
       <section
         ref={pageRef}
-        className="min-h-screen relative overflow-hidden flex items-center"
+        className="min-h-screen bg-black py-20 relative overflow-hidden flex items-center"
       >
         {/* Fondo animado */}
         <div className="absolute inset-0">
@@ -112,46 +112,65 @@ const JobSearchPage = () => {
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          {/* Header */}
           <div
-            className={`text-center transition-all duration-1000 transform ${
+            className={`text-center mb-16 transition-all duration-1000 transform ${
               isVisible
                 ? 'translate-y-0 opacity-100'
                 : 'translate-y-10 opacity-0'
             }`}
           >
-            <div className="mb-8">
-              <h1 className="text-5xl sm:text-7xl font-bold text-white mb-6 leading-tight">
-                Me gusta{' '}
-                <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
-                  enseñar
-                </span>
-              </h1>
+            <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+              Me gusta{' '}
+              <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+                enseñar
+              </span>
+            </h1>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              Docente apasionado por el desarrollo web y las tecnologías
+              modernas
+            </p>
+            <div className="w-20 h-1 bg-green-500 mx-auto mt-6"></div>
+          </div>
 
+          {/* Contenido principal */}
+          <div
+            className={`transition-all duration-1000 transform ${
+              isVisible
+                ? 'translate-y-0 opacity-100'
+                : 'translate-y-10 opacity-0'
+            }`}
+          >
+            <div className="text-center mb-12">
               <div className="flex justify-center items-center gap-4 mb-8">
-                <Heart className="text-green-500 animate-pulse" size={32} />
-                <span className="text-2xl text-gray-200 font-semibold">
+                <Heart className="text-green-500 animate-pulse" size={24} />
+                <span className="text-xl sm:text-2xl text-gray-200 font-semibold">
                   Docente Fullstack JavaScript
                 </span>
-                <Heart className="text-green-500 animate-pulse" size={32} />
+                <Heart className="text-green-500 animate-pulse" size={24} />
               </div>
 
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
-                Quiero trabajar como docente, siempre me a gustado enseñar y más
-                ahora que e aprendido mas cosas sobre el desarrollo web.
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
+                Quiero trabajar como docente, siempre me ha gustado enseñar y
+                más ahora que he aprendido más cosas sobre el desarrollo web.
               </p>
 
               <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 text-gray-400 mb-12">
                 <div className="flex items-center gap-3">
-                  <Code size={28} className="text-green-500" />
-                  <span className="text-lg">React • Node.js • PostgreSQL</span>
+                  <Code size={24} className="text-green-500" />
+                  <span className="text-base sm:text-lg">
+                    React • Node.js • PostgreSQL
+                  </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <BookOpen size={28} className="text-green-500" />
-                  <span className="text-lg">Educación Tecnológica</span>
+                  <BookOpen size={24} className="text-green-500" />
+                  <span className="text-base sm:text-lg">
+                    Educación Tecnológica
+                  </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <MapPin size={28} className="text-green-500" />
-                  <span className="text-lg">Santiago, Chile</span>
+                  <MapPin size={24} className="text-green-500" />
+                  <span className="text-base sm:text-lg">Santiago, Chile</span>
                 </div>
               </div>
 
@@ -161,12 +180,11 @@ const JobSearchPage = () => {
                   download="Darío-Gago-CV.pdf"
                   className="border-2 border-green-500 text-green-500 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-green-500 hover:text-black transition-all duration-300 transform hover:scale-105 w-full sm:w-auto text-sm sm:text-base inline-block text-center no-underline"
                 >
+                  <Download className="inline mr-2" size={20} />
                   Descargar CV
                 </a>
               </div>
             </div>
-
-            <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-green-600 mx-auto"></div>
           </div>
         </div>
       </section>
