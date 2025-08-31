@@ -81,7 +81,7 @@ const About = () => {
 
   const experience = [
     {
-      year: '2024',
+      year: '2025',
       title: 'Desarrollador Full Stack',
       description:
         'Desarrollo de aplicaciones web modernas con React y Node.js',
