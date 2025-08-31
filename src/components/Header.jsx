@@ -144,19 +144,6 @@ const Header = () => {
             </button>
           </div>
         </nav>
-
-        {/* Indicador de progreso de scroll */}
-        <div
-          className="absolute bottom-0 left-0 h-0.5 bg-green-500 transition-all duration-300"
-          style={{
-            width: `${Math.min(
-              (window.scrollY /
-                (document.documentElement.scrollHeight - window.innerHeight)) *
-                100,
-              100
-            )}%`
-          }}
-        ></div>
       </header>
 
       {/* Menú móvil - Overlay completo */}
