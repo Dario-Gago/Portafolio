@@ -164,9 +164,13 @@ const Home = () => {
                 </svg>
               </Link>
 
-              <button className="border-2 border-green-500 text-green-500 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-green-500 hover:text-black transition-all duration-300 transform hover:scale-105 w-full sm:w-auto text-sm sm:text-base">
+              <a
+                href="/PDF-Dario-Gago.pdf"
+                download="Darío-Gago-CV.pdf"
+                className="border-2 border-green-500 text-green-500 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-green-500 hover:text-black transition-all duration-300 transform hover:scale-105 w-full sm:w-auto text-sm sm:text-base inline-block text-center no-underline"
+              >
                 Descargar CV
-              </button>
+              </a>
             </div>
 
             {/* Stats */}
