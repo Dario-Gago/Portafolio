@@ -88,14 +88,14 @@ const About = () => {
       status: 'actual'
     },
     {
-      year: '2023',
+      year: '2024',
       title: 'Aprendizaje Autodidacta',
       description:
         'Formación intensiva en tecnologías web y desarrollo de proyectos personales',
       status: 'completed'
     },
     {
-      year: '2022',
+      year: '2023',
       title: 'Inicio en Programación',
       description: 'Primeros pasos en el mundo del desarrollo web',
       status: 'completed'
