@@ -194,7 +194,7 @@ const Home = () => {
 
           {/* Panel de tecnologías */}
           <div
-            className={`transition-all duration-1000 delay-300 transform order-first lg:order-last ${
+            className={`transition-all duration-1000 delay-300 transform ${
               isVisible
                 ? 'translate-y-0 opacity-100'
                 : 'translate-y-10 opacity-0'
