@@ -53,7 +53,8 @@ const Header = () => {
   const navItems = [
     { name: 'Inicio', href: '/' },
     { name: 'Sobre mí', href: '/about' },
-    { name: 'Proyectos', href: '/projects' }
+    { name: 'Proyectos', href: '/projects' },
+    { name: '¿Qué busco?', href: '/search' }
   ]
 
   const handleMenuToggle = () => {
