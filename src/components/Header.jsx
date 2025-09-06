@@ -7,49 +7,40 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      // Solo actualiza si el estado cambia
       setIsScrolled(window.scrollY > 50)
-    }
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  // Cerrar menú al hacer scroll o redimensionar
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 768) {
-        setIsMenuOpen(false)
-      }
-    }
-
-    const handleScroll = () => {
+      // Si el menú está abierto y se hace scroll, ciérralo
       if (isMenuOpen) {
         setIsMenuOpen(false)
       }
     }
 
-    window.addEventListener('resize', handleResize)
+    const handleResize = () => {
+      // Cierra el menú en pantallas grandes
+      if (window.innerWidth >= 768 && isMenuOpen) {
+        setIsMenuOpen(false)
+      }
+    }
+
     window.addEventListener('scroll', handleScroll)
+    window.addEventListener('resize', handleResize)
 
+    // Limpia los listeners
     return () => {
-      window.removeEventListener('resize', handleResize)
       window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', handleResize)
     }
-  }, [isMenuOpen])
+  }, [isMenuOpen]) // El array de dependencias es importante para que el efecto se vuelva a ejecutar cuando isMenuOpen cambie.
 
-  // Prevenir scroll del body cuando el menú está abierto
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = 'unset'
-    }
-
+    // Previene el scroll del body solo cuando es necesario
+    document.body.style.overflow = isMenuOpen ? 'hidden' : 'unset'
+    // La función de limpieza se encarga de restaurar el estado original
     return () => {
       document.body.style.overflow = 'unset'
     }
   }, [isMenuOpen])
-
   const navItems = [
     { name: 'Inicio', href: '/' },
     { name: 'Sobre mí', href: '/about' },
@@ -122,6 +113,8 @@ const Header = () => {
               onClick={handleMenuToggle}
               className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 group z-60 relative"
               aria-label="Toggle menu"
+              aria-expanded={isMenuOpen} // Indica si el menú está expandido
+              aria-controls="mobile-menu"
             >
               <span
                 className={`w-6 h-0.5 bg-white transition-all duration-300 ${
@@ -149,6 +142,7 @@ const Header = () => {
 
       {/* Menú móvil - Overlay completo */}
       <div
+        id="mobile-menu"
         className={`fixed inset-0 z-40 md:hidden transition-all duration-500 ${
           isMenuOpen
             ? 'opacity-100 pointer-events-auto'
