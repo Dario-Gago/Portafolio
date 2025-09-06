@@ -37,7 +37,7 @@ const Projects = () => {
       ],
       category: 'Website Corporativo',
       url: 'https://nunoa-dental.vercel.app/',
-      image: '/api/placeholder/600/400',
+      image: '/Nunoa.png',
       features: [
         'Diseño responsive y moderno',
         'Sistema de información de servicios',
@@ -59,7 +59,7 @@ const Projects = () => {
       technologies: ['React', 'Node.js', 'Postgres', 'Express', 'JWT'],
       category: 'E-commerce Full Stack',
       url: 'https://techzone-1.onrender.com/',
-      image: '/api/placeholder/600/400',
+      image: '/Tech.png',
       features: [
         'Sistema completo de e-commerce',
         'Panel de administración avanzado',
@@ -131,9 +131,9 @@ const Projects = () => {
               >
                 {/* Imagen del proyecto */}
                 <div className="relative h-64 overflow-hidden">
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-20`}
-                  ></div>
+                  <div className={`absolute inset-0  opacity-20`}>
+                    <img src={project.image} alt="" />
+                  </div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center text-white">
                       <div className="w-20 h-20 mx-auto mb-4 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">

@@ -17,9 +17,7 @@ import {
 } from 'lucide-react'
 
 const JobSearchPage = () => {
-  const [searchTerm, setSearchTerm] = useState('')
   const [isVisible, setIsVisible] = useState(false)
-  const [activeSection, setActiveSection] = useState('hero')
   const pageRef = useRef(null)
 
   useEffect(() => {
@@ -38,64 +36,6 @@ const JobSearchPage = () => {
 
     return () => observer.disconnect()
   }, [])
-
-  const skills = [
-    { name: 'React.js', level: 95, icon: '⚛️' },
-    { name: 'Node.js', level: 90, icon: '🟢' },
-    { name: 'PostgreSQL', level: 88, icon: '🐘' },
-    { name: 'Express.js', level: 92, icon: '🚂' },
-    { name: 'MongoDB', level: 85, icon: '🍃' },
-    { name: 'Git & GitHub', level: 93, icon: '📚' },
-    { name: 'Metodologías Ágiles', level: 87, icon: '🔄' },
-    { name: 'Pedagogía Digital', level: 91, icon: '🎓' }
-  ]
-
-  const experience = [
-    {
-      role: 'Instructor Fullstack JavaScript',
-      company: 'Bootcamp TechEd',
-      period: '2023 - Presente',
-      description:
-        'Enseño desarrollo web completo a más de 100 estudiantes, desde fundamentos hasta proyectos avanzados.'
-    },
-    {
-      role: 'Mentor de Programación',
-      company: 'Academia Digital',
-      period: '2022 - 2023',
-      description:
-        'Mentoría personalizada en JavaScript, React y Node.js para estudiantes de diferentes niveles.'
-    },
-    {
-      role: 'Desarrollador Fullstack',
-      company: 'StartupTech',
-      period: '2021 - 2022',
-      description:
-        'Desarrollo de aplicaciones web escalables con tecnologías modernas del ecosistema JavaScript.'
-    }
-  ]
-
-  const teachingAreas = [
-    {
-      title: 'Frontend Moderno',
-      tech: ['React.js', 'Next.js', 'TypeScript', 'Tailwind CSS'],
-      icon: <Monitor className="text-green-500" size={32} />
-    },
-    {
-      title: 'Backend Robusto',
-      tech: ['Node.js', 'Express.js', 'API REST', 'GraphQL'],
-      icon: <Database className="text-green-500" size={32} />
-    },
-    {
-      title: 'Bases de Datos',
-      tech: ['PostgreSQL', 'MongoDB', 'Prisma ORM', 'SQL'],
-      icon: <Layers className="text-green-500" size={32} />
-    },
-    {
-      title: 'Herramientas Dev',
-      tech: ['Git', 'Docker', 'AWS', 'Testing'],
-      icon: <Code className="text-green-500" size={32} />
-    }
-  ]
 
   return (
     <div className="min-h-screen bg-black text-white">
