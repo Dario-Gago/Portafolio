@@ -66,7 +66,7 @@ const Projects = () => {
         'Gestión de productos en tiempo real',
         'Carrito de compras funcional',
         'Autenticación segura con JWT',
-        'Base de datos MongoDB'
+        'Base de datos Prostgres'
       ],
       color: 'from-purple-500 to-pink-500',
       bgColor: 'bg-purple-500/10',
