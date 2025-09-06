@@ -67,8 +67,7 @@ const JobSearchPage = () => {
               </span>
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Docente apasionado por el desarrollo web y las tecnologías
-              modernas
+              Apasionado por el desarrollo web y las tecnologías modernas
             </p>
             <div className="w-20 h-1 bg-green-500 mx-auto mt-6"></div>
           </div>
@@ -85,7 +84,7 @@ const JobSearchPage = () => {
               <div className="flex justify-center items-center gap-4 mb-8">
                 <Heart className="text-green-500 animate-pulse" size={24} />
                 <span className="text-xl sm:text-2xl text-gray-200 font-semibold">
-                  Docente Fullstack JavaScript
+                  Fullstack JavaScript
                 </span>
                 <Heart className="text-green-500 animate-pulse" size={24} />
               </div>
