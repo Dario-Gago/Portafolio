@@ -23,6 +23,10 @@ const About = () => {
   }, [])
 
   const tabs = {
+    inspiration: {
+      label: 'Inspiración',
+      icon: ''
+    },
     story: {
       label: 'Mi Historia',
       icon: (
@@ -113,6 +117,17 @@ const About = () => {
 
   const renderTabContent = () => {
     switch (activeTab) {
+      case 'inspiration':
+        return (
+          <div className="space-y-6">
+            <p className="text-gray-300 leading-relaxed">
+              Mi inspiración proviene de Steve Jobs, Elon Musk, Bill Gates y
+              más. Estos personajes me han ayudado en mi desarrollo personal y
+              en la industria de la informatica. El talento y la dedicación que
+              han demostrado me motivan a seguir aprendiendo y creciendo.
+            </p>
+          </div>
+        )
       case 'story':
         return (
           <div className="space-y-6">
